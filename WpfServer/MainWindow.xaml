@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" x:Name="dataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ProductCode}" Header="Код продукта" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Amount}" Header="Количество" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
